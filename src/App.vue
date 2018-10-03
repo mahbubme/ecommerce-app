@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <app-header></app-header>
+    <b-container class="bv-example-row header">
+        <app-header></app-header>
+    </b-container>
     <router-view/>
   </div>
 </template>
@@ -16,4 +18,7 @@
 </script>
 
 <style>
+    .header{
+        margin-bottom: 30px;
+    }
 </style>

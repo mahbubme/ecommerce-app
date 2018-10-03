@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <Products msg="All Products"/>
-  </div>
+    <Products/>
 </template>
 
 <script>

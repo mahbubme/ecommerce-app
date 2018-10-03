@@ -1,32 +1,26 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
+    <b-container class="bv-example-row products">
+        <b-row>
+            <Product v-for="product in products" :product="product"></Product>
+        </b-row>
+    </b-container>
 </template>
 
 <script>
-export default {
-  name: 'Products',
-  props: {
-    msg: String
-  }
-}
+    import Product from './Product.vue';
+
+    export default {
+      name: 'Products',
+      computed: {
+        products() {
+          return this.$store.state.products;
+        }
+      },
+      components: {
+        Product
+      }
+    }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>

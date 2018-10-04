@@ -75,6 +75,7 @@
     .single-product .product-details{
         width: 65%;
         float: left;
+        padding-right: 10px;
     }
 
     .single-product .add-to-cart{

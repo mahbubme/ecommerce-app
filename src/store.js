@@ -13,7 +13,7 @@ export default new Vuex.Store({
         { id: 5, title: "Keds sneakers", isExclusive: true, category: "shoes", price: "75.00", img: "https://mosaic01.ztat.net/vgs/media/pdp-reco-2x/PK/11/2O/00/9A/11/PK112O009-A11@6.jpg" },
         { id: 6, title: "Another shirt", isExclusive: false, category: "shirt", price: "40.20", img: "https://mosaic01.ztat.net/vgs/media/pdp-reco-2x/JA/G2/2D/00/1C/11/JAG22D001-C11@10.1.jpg" }
     ],
-
+    filterProducts: [],
     carts: [],
   },
   getters: {
@@ -24,6 +24,11 @@ export default new Vuex.Store({
         let total = 0;
         state.carts.map( p => { total += parseFloat(p.price) } );
         return total.toFixed(2);
+    },
+    uniqueCategories(state) {
+        let categories = [];
+        state.products.map( p => { categories.push(p.category) } );
+        return [...new Set( categories )];
     }
   },
   mutations: {

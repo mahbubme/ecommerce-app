@@ -4,7 +4,7 @@
         <b-collapse is-nav id="nav_collapse">
 
             <b-navbar-nav>
-                <router-link to="/products" activeClass="active" tag="li" class="nav-item"><a class="nav-link">Products</a></router-link>
+                <router-link to="/" activeClass="active" tag="li" class="nav-item"><a class="nav-link">Products</a></router-link>
                 <router-link to="/about" activeClass="active" tag="li" class="nav-item"><a class="nav-link">About</a></router-link>
             </b-navbar-nav>
 

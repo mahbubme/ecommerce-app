@@ -5,7 +5,7 @@
             <b-card-img :src="product.img" :alt="product.title" class="product-img"></b-card-img>
             <b-card-body class="product-content">
                 <div class="product-details">
-                    <h4 class="product-title">{{ product.title }}</h4>
+                    <h4 class="product-title"><router-link :to="{ name: 'product', params: { id: product.id }}">{{ product.title }}</router-link></h4>
                     <span class="product-category">{{ product.category }}</span>
                     <h5 class="product-price">${{ product.price }}</h5>
                 </div>
@@ -67,7 +67,7 @@
 
     .card-body.product-content{
         border: 1px solid #ddd;
-        padding: 20px 15px;
+        padding: 18px 20px 25px 20px;
         border-radius: 0 0 6px 6px;
         overflow: hidden;
     }
@@ -83,12 +83,22 @@
         float: left;
         vertical-align: top;
         overflow: hidden;
+        padding-top: 8px;
     }
 
     .product-details .product-title{
+        margin: 0;
+    }
+
+    .product-details .product-title a{
         font-size: 16px;
         margin: 0;
         color: #6c757d;
+    }
+
+    .product-details .product-title a:hover{
+        color: #17a2b8;
+        text-decoration: none;
     }
 
     .product-details .product-category{
@@ -118,6 +128,13 @@
         width: 100%;
     }
 
+    .product-content .add-to-cart .btn:hover,
+    .product-content .add-to-cart .btn:focus{
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: #17a2b8;
+    }
+
     @media (max-width: 800px) {
         .single-product .product-details{
             width: 60%;
@@ -131,7 +148,7 @@
             font-size: 8px;
         }
 
-        .product-details .product-title{
+        .product-details .product-title a{
             font-size: 12px;
         }
 

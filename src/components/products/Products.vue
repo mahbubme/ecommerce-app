@@ -10,15 +10,15 @@
     import Product from './Product.vue';
 
     export default {
-      name: 'Products',
-      computed: {
-        products() {
-          return this.$store.state.filterProducts;
+        name: 'Products',
+        computed: {
+            products() {
+              return this.$store.state.filterProducts;
+            }
+        },
+        components: {
+            Product
         }
-      },
-      components: {
-        Product
-      }
     }
 </script>
 

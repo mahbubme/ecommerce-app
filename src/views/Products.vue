@@ -7,9 +7,9 @@
 import Products from '@/components/products/Products.vue'
 
 export default {
-  name: 'products',
-  components: {
-    Products
-  }
+    name: 'products',
+    components: {
+        Products
+    }
 }
 </script>

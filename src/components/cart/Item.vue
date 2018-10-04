@@ -1,7 +1,7 @@
 <template>
     <b-media tag="li">
         <b-img thumbnail rounded slot="aside" :src="item.img" alt="item.title" class="cart-product-img" />
-        <h5 class="mt-0 mb-1 cart-item-title"><a href="#">{{ item.title }}</a></h5>
+        <h5 class="mt-0 mb-1 cart-item-title"><router-link :to="{ name: 'product', params: { id: item.id }}">{{ item.title }}</router-link></h5>
         <span class="cart-item-quantity">
             1 x
             <span class="cart-item-price">${{ item.price }}</span>

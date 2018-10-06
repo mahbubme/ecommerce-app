@@ -8,15 +8,15 @@
     import cartItem from './Item.vue';
 
     export default {
-      name: 'Items',
-      computed: {
-        cartItems() {
-          return this.$store.state.carts;
+        name: 'Items',
+        computed: {
+            cartItems() {
+                return this.$store.state.carts;
+            }
+        },
+        components: {
+            cartItem
         }
-      },
-      components: {
-        cartItem
-      }
     }
 </script>
 

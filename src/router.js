@@ -7,28 +7,28 @@ import About from './views/About.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Products
-    },
-    {
-      path: '/products',
-      name: 'products',
-      component: Products
-    },
-    {
-      path: '/product/:id',
-      name: 'product',
-      component: Single
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About
-    }
-  ]
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Products
+        },
+        {
+            path: '/products',
+            name: 'products',
+            component: Products
+        },
+        {
+            path: '/product/:id',
+            name: 'product',
+            component: Single
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: About
+        }
+    ]
 })
